@@ -1,0 +1,1 @@
+<img src="<?=URL?>images/global/permalink_404_1.png" alt="404 Page Fount - Sayfa Bulunamadı">

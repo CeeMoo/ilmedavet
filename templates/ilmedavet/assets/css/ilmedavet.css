@@ -1,0 +1,41 @@
+#topbar{height:45px;background-color: #0B914E;overflow: hidden;}
+aside#menu_kisim{
+	height: 75px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9d9d9+0,fafafa+35,fafafa+70,d7d7d7+100 */
+	background: #d9d9d9; /* Old browsers */
+	background: -moz-linear-gradient(top, #d9d9d9 0%, #fafafa 35%, #fafafa 70%, #d7d7d7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d9d9d9 0%,#fafafa 35%,#fafafa 70%,#d7d7d7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d9d9d9 0%,#fafafa 35%,#fafafa 70%,#d7d7d7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#d7d7d7',GradientType=0 ); /* IE6-9 */
+	box-shadow: inset 0px 0px 2px 0px #FAFAFA;
+}
+#logom{position: absolute;top: 0;z-index: 9999}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+a.dropdown-item {
+    line-height: 25px;
+}
+#topbar ul.navbar-nav li{line-height: 43px; margin-right: 5px;}
+#topbar ul.navbar-nav li a{color:#333;padding:0 5px;}
+#topbar ul.navbar-nav li {border-right: 1px solid #097740;padding: 0 2px}
+#topbar ul.navbar-nav li:nth-child(4),
+#topbar ul.navbar-nav li:nth-child(5), 
+#topbar ul.navbar-nav li:nth-child(6), 
+#topbar ul.navbar-nav li:nth-child(7) 
+{border-right: 0px solid #000;}
+
+.social i{cursor:pointer;font-size:22px;color: #fff;padding:7px 5px;margin: 5px 1px; background-color: #f4f4f4;border-radius: 4px;}
+.social i:hover{opacity: 0.8;}
+.social i.fa-facebook{color: #3B5998;}
+.social i.fa-twitter{color: #55ACEE;}
+.social i.fa-youtube{color: #E02F2F;}
