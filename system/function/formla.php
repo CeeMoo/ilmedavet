@@ -136,6 +136,38 @@
 					$cikti.='<input type="hidden" name="'.$ve[1].'" value="'.$ve[20].'">';
 				}elseif($ve[0] == 'submit'){
 					$submit='<button type="submit" class="btn btn-success w-100" onclick="'.$ajax_func.'(\''.$ajax_islem.'\')">'.$ve[20].'</button>';
+				}elseif($ve[0] == 'extra2'){
+					$cikti.='<div class="form-group position-relative">
+					<div id="extra_id">';
+						
+						global $bag;
+
+						$extra_gel=$bag->query("SELECT * FROM sesli_extra WHERE sesli_id='{$db['id']}'")->fetchAll(PDO::FETCH_ASSOC);
+
+						foreach($extra_gel as $ext){
+							$cikti.='<div id="extra'.$ext['id'].'" class="row pb-2">';
+								$cikti.='<div class="col-3"><select class="form-control extra'.$ext['id'].'" name="extra['.$ext['id'].'][select]">';
+								$sabit_extra=$bag->query("SELECT * FROM sabit_extra WHERE gorunum=2")->fetchAll(PDO::FETCH_ASSOC);
+									foreach($sabit_extra as $s_ext){
+										$cikti.='<option value="'.$s_ext['id'].'">'.$s_ext['baslik'].'</option>';
+									}
+								$cikti.='</select></div>';
+								$extra_gel_val=$bag->query("SELECT * FROM sabit_extra WHERE gorunum=2 && baslik='{$ext['baslik']}'")->fetch(PDO::FETCH_ASSOC);
+								if(!empty($extra_gel_val)){
+									$cikti.='<script>$(".extra'.$ext['id'].'").val('.$extra_gel_val['id'].').change();</script>';
+								}
+							
+							$cikti.='<div class="col-3"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][baslik]" value="'.$ext['baslik'].'"></div>
+								<div class="col"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" value="'.$ext['aciklama'].'"></div>
+								<div class="float-right"><button class="btn btn-info" onclick="goruntulu_extra_sil('.$ext['id'].');"><i class="fas fa-backspace"></i></button></div>
+							</div>';
+						}
+
+						$cikti.='<div class="text-center m-3" style="font-size:20px">
+							<button class="btn btn-info" onclick="goruntulu_extra_ekle();"><i class="fas fa-grip-horizontal"></i></button>
+						</div>
+					</div>';
+				  $cikti.='</div>';
 				}
 			}
 		}

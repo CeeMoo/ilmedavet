@@ -18,5 +18,6 @@ $desc='';
 $keyword='';
 $g_logo='';
 $url=url;
+$g_author='huutheme';
 
-$seo=array('title' => $title, 'desc' => $desc, 'keyword' => $keyword, 'url' => $url);
+$seo=array('title' => $title, 'desc' => $desc, 'keyword' => $keyword, 'url' => $url, 'g_author' => $g_author);

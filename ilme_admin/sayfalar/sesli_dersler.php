@@ -91,7 +91,17 @@ class sesli_dersler{
 			}
 		}
 
+		$goruntulu_extra=$db->from('sabit_extra')->where('gorunum', 2)->where('aktif', 1)->all();
+
+		foreach($goruntulu_extra as $g_ext){
+			$goruntulu_extralist[$g_ext['id']]=$g_ext['baslik'];
+		}
+
+		global $g_js;
+		array_push($g_js, 'js/sesli_extralist.js');
+
 		$veriler=array(
+			[0 => 'extra', 1 => 'extra', 2 => 'Ders Adı', 50 => $goruntulu_extralist],
 			[0 => 'input', 1 => 'baslik', 2 => 'Ders Adı', 3 => 'Ders Adı'],
 			[0 => 'select', 1 => 'kat_id', 2 => 'Ders Kategori', 50 => $sesli_dersler_kat_id],
 			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama', 'Kısa Açıklama(seo)'],
@@ -121,7 +131,11 @@ class sesli_dersler{
 
 		$sesli_dersler=$db->from('sesli_dersler')->where('id', g('id'))->first();
 
+		global $g_js;
+		array_push($g_js, 'js/sesli_extralist.js');
+
 		$veriler=array(
+			[0 => 'extra2', 1 => 'extra', 2 => 'Görüntü Video İframe Kodlar'],
 			[0 => 'input', 1 => 'baslik', 2 => 'Ders Adı', 3 => 'Ders Adı'],
 			[0 => 'select', 1 => 'kat_id', 2 => 'Ders Kategori', 50 => $sesli_dersler_kat_id],
 			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama', 'Kısa Açıklama(seo)'],

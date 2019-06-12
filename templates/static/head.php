@@ -9,7 +9,7 @@
 
     <meta name="Keywords" content="<?=$seo['keyword']?>">
     <meta name="description" content="<?=$seo['desc']?>">
-    <meta name="author" content="kanyonbilisim.com">
+    <meta name="author" content="<?=$seo['g_author']?>">
     <meta property="og:type" content= "website" />
     <meta property="og:url" content="<?=$seo['url']?>" />
     <meta property="og:site_name" content="<?=$seo['title']?>" />

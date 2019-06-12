@@ -39,6 +39,27 @@ switch ($yap) {
 			));
 
 			if($ekle){
+				$lastID=$db->lastId();
+
+				if(!empty($_POST['extra'])){
+					foreach($_POST['extra'] as  $ex => $ext){
+						$baslik_ext=$ext['baslik'];
+						$aciklama_ext=$ext['aciklama'];
+
+						if(!empty($baslik_ext)){
+							$baslik=$baslik_ext;
+						}else{
+							$select_baslik=$db->from('sabit_extra')->where('id', $ext['select'])->first();
+							$baslik=$select_baslik['baslik'];
+						}
+						$sesli_extra_ekle=$db->insert('sesli_extra')->set([
+							'sesli_id' => $lastID,
+							'baslik' => $baslik,
+							'aciklama' => $aciklama_ext
+						]);
+					}					
+				}
+
 				echo alert('Ekleme işlemi başarılıdır.', 3);
 				go(url_admin.'?sayfa=sesli_dersler', 'js', 2);
 			}else{
@@ -81,6 +102,35 @@ switch ($yap) {
 			));
 
 			if($upla){
+				if(!empty($_POST['extra'])){
+					foreach($_POST['extra'] as  $ex => $ext){
+						$ext_kontrol=$db->from('sesli_extra')->select('count(id) as total')->where('id', $ex)->total();
+							
+							$baslik_ext=$ext['baslik'];
+							$aciklama_ext=$ext['aciklama'];
+
+							if(!empty($baslik_ext)){
+								$baslik=$baslik_ext;
+							}else{
+								$select_baslik=$db->from('sabit_extra')->where('id', $ext['select'])->first();
+								$baslik=$select_baslik['baslik'];
+							}
+
+								if($ext_kontrol != 0){
+									$goruntulu_extra_upla=$db->update('sesli_extra')->where('id', $ex)->set([
+										'sesli_id' => $id,
+										'baslik' => $baslik,
+										'aciklama' => $aciklama_ext
+									]);
+								}else{
+									$goruntulu_extra_ekle=$db->insert('sesli_extra')->set([
+										'sesli_id' => $id,
+										'baslik' => $baslik,
+										'aciklama' => $aciklama_ext
+									]);
+								}
+					}					
+				}
 				echo alert('Düzenleme işlemi başarılıdır.', 3);
 				go(url_admin.'?sayfa=sesli_dersler', 'js', 2);
 				//go(url_admin.'?sayfa=dost_dernek&alt=duzenle&id='.$id, 'js', 1);
@@ -143,6 +193,46 @@ switch ($yap) {
 			echo alert('Lütfen gerekli alanları doldurunuz');
 		}
 
+	break;
+
+	case 'sesli_extra_ekle':
+		$sayi_gel=rand(0, 400);
+		
+		echo '
+		<div id="extra'.$sayi_gel.'" class="row pb-2 position-relative">
+			<div class="col-3">
+				<select class="form-control" name="extra['.$sayi_gel.'][select]">';
+				$sabit_extra=$db->from('sabit_extra')->where('gorunum', 2)->where('aktif', 1)->all();
+					foreach($sabit_extra as $s_ext){
+						echo '<option value="'.$s_ext['id'].'">'.$s_ext['baslik'].'</option>';
+					}
+				echo '</select>
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control" name="extra['.$sayi_gel.'][baslik]" placeholder="Başlık">
+			</div>
+			<div class="col">
+				<input type="text" class="form-control" name="extra['.$sayi_gel.'][aciklama]" placeholder="İframe Kodu">
+			</div>
+			<div class="float-right"><button class="btn btn-info" onclick="goruntulu_extra_sil('.$sayi_gel.');"><i class="fas fa-backspace"></i></button></div>
+		</div>';
+
+	break;
+
+	case 'sesli_extra_sil':
+		$id=p('id');
+
+		$var_mi=$db->from('sesli_extra')->select('count(id) as total')->where('id', $id)->total();
+
+		if($var_mi != 0){
+			$sil=$db->delete('sesli_extra')->where('id', $id)->done();
+
+			if($sil){
+				echo '<script>$("#extra'.$id.'").remove();</script>';
+			}
+		}else{
+			echo '<script>$("#extra'.$id.'").remove();</script>';
+		}
 	break;
 
 	

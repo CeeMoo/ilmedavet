@@ -16,24 +16,20 @@
 	</div>
 	<aside id="menu_kisim">
 		<div class="container">
-			<div id="logom">
+			<!--<div id="logom">
 				<img src="<?=url_yol?>images/logo.png" alt="<?=title?>">
-			</div>
+			</div>-->
 			<nav class="navbar navbar-expand-lg navbar-light">
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 			    <ul class="navbar-nav">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Features</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Pricing</a>
-			      </li>
+			      <li class="nav-item active"><a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a></li>
+			      <li class="nav-item"><a class="nav-link" href="sayfa.php?s=hakkimizda">Hakkımızda</a></li>
+			      <li class="nav-item"><a class="nav-link" href="sayfa.php?s=bagis">Bağış</a></li>
+			      <li class="nav-item"><a class="nav-link" href="dost_dernek.php">Dost Dernekler</a></li>
+			      <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
 			      <li class="nav-item dropdown">
 			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			          Dropdown link
