@@ -11,7 +11,7 @@
       <div class="carousel-inner">
         <?php
           foreach($slider as $slt => $slyt){
-            echo '<div class="carousel-item'.($slt==0 ? ' active' : null).'" data-interval="'.$slt.'0000"><img src="'.url_yol.'images/slider/'.$slyt.'" class="d-block w-100" alt="..."></div>';
+            echo '<div class="carousel-item'.($slt==0 ? ' active' : null).'" data-interval="'.$slt.'0000"><img src="'.$slyt['resim'].'" class="d-block w-100 h-50" alt="'.$slyt['baslik'].'"></div>';
           }
         ?>
       </div>
@@ -46,27 +46,49 @@
 </div>
 
 <div class="container">
+  <div class="row mt-3 mb-3">
+  <?php foreach($son_yazarlar as $sn_yaz):?>
+    <?php $uye_av=$db->from('yazarlar')->where('uye_id', $sn_yaz['uye_id'])->first();  ?>
+    <div class="col-4">
+      <?php
+        if(!empty($uye_av['resim'])){echo '<img src="'.$uye_av['resim'].'" class="rounded-circle mx-auto d-block mb-2" style="width:150px;height:150px;" alt="yazar">';}
+      ?>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center"><a href="<?=url?>yazarlar.php?sayfa=incele&ic=<?=$sn_yaz['slug']?>"><?=$sn_yaz['baslik']?></a></h5>
+          <p class="card-text"><?=$sn_yaz['kisa_aciklama']?></p>
+        </div>
+      </div>
+    </div>
+  <?php endforeach; ?>
+
+  </div>
+</div>
+
+<div class="container">
   <div class="row mt-4 mb-4">
     <div class="col-md-4">
       <div class="card">
-        <div class="p-2 bg-primary text-white">Akaid</div>
+        <div class="p-2 bg-primary text-white">Yazılı Dersler</div>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <?php
+          foreach($yazili_dersler as $yaz_ders){
+            echo '<a href="yazili_dersler.php?sayfa=incele&ic='.$yaz_ders['slug'].'" class="list-group-item list-group-item-action">'.$yaz_ders['baslik'].'</a>';
+          }
+        ?>
         </div>
       </div>
     </div>
     <div class="col-md-4">
 
       <div class="card">
-        <div class="p-2 bg-warning text-white">Hadis</div>
+        <div class="p-2 bg-warning text-white">Sesli Dersler</div>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <?php
+          foreach($sesli_dersler as $yaz_ders){
+            echo '<a href="'.url.'sesli_dersler.php?sayfa=icerik&ic='.$yaz_ders['slug'].'" class="list-group-item list-group-item-action">'.$yaz_ders['baslik'].'</a>';
+          }
+        ?>
         </div>
       </div>
 
@@ -74,12 +96,13 @@
     <div class="col-md-4">
 
       <div class="card">
-        <div class="p-2 bg-warning text-white">Fıkhı</div>
+        <div class="p-2 bg-danger text-white">Görüntülü Dersler</div>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <?php
+          foreach($goruntulu_dersler as $yaz_ders){
+            echo '<a href="'.url.'goruntulu_dersler.php?sayfa=icerik&ic='.$yaz_ders['slug'].'" class="list-group-item list-group-item-action">'.$yaz_ders['baslik'].'</a>';
+          }
+        ?>
         </div>
       </div>
 
@@ -87,7 +110,7 @@
   </div>
 </div>
 
-
+<!--
 <aside class="container">
   <div class="row">
     <div class="col-6 col-md">
@@ -151,3 +174,4 @@
       </div>
     </div>
   </div>
+  -->

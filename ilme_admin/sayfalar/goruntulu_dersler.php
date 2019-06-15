@@ -102,6 +102,7 @@ class goruntulu_dersler{
 		$veriler=array(
 			[0 => 'extra', 1 => 'extra', 2 => 'Ders Adı', 50 => $goruntulu_extralist],
 			[0 => 'input', 1 => 'baslik', 2 => 'Ders Adı', 3 => 'Ders Adı'],
+			[0 => 'input', 1 => 'resim', 2 => 'Resim Görüntü', 3 => 'görünürdeki resim adresini http ile full giriniz'],
 			[0 => 'select', 1 => 'kat_id', 2 => 'Ders Kategori', 50 => $goruntulu_dersler_kat_id],
 			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama', 'Kısa Açıklama(seo)'],
 			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Ders ile ilgili açıklamanızı giriniz'],
@@ -135,6 +136,7 @@ class goruntulu_dersler{
 		$veriler=array(
 			[0 => 'extra', 1 => 'extra', 2 => 'Görüntü Video İframe Kodlar'],
 			[0 => 'input', 1 => 'baslik', 2 => 'Ders Adı', 3 => 'Ders Adı'],
+			[0 => 'input', 1 => 'resim', 2 => 'Resim Görüntü', 3 => 'görünürdeki resim adresini http ile full giriniz'],
 			[0 => 'select', 1 => 'kat_id', 2 => 'Ders Kategori', 50 => $goruntulu_dersler_kat_id],
 			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama', 'Kısa Açıklama(seo)'],
 			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Ders ile ilgili açıklamanızı giriniz'],

@@ -13,11 +13,4 @@ $g_js=array(
 	'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 );
 
-$title='';
-$desc='';
-$keyword='';
-$g_logo='';
-$url=url;
-$g_author='huutheme';
-
 $seo=array('title' => $title, 'desc' => $desc, 'keyword' => $keyword, 'url' => $url, 'g_author' => $g_author);

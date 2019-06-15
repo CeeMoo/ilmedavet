@@ -25,6 +25,13 @@
 
 		if(empty($say))
 			$array_tema_part[3]='templates/hata404.php';
+
+		$title='';
+		$desc='';
+		$keyword='';
+		$g_logo='';
+		$url=url;
+		$g_author='huutheme';
 		
 		foreach($array_tema_part as $theme_cik){
 			if(file_exists($theme_cik)){

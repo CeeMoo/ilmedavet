@@ -92,15 +92,16 @@ class dost_dernek{
 		$dost_dernek=$db->from('dost_dernek')->where('id', g('id'))->first();
 
 		$veriler=array(
-			[0 => 'submit', 20 => 'Gönder'],
 			[0 => 'input', 1 => 'baslik', 2 => 'Dernek Adı', 3 => 'Dernek Adı'],
 			[0 => 'select', 1 => 'dost_dernek_kat_id', 2 => 'Dernek Kategori İL-İLÇE', 50 => $dost_dernek_kat_id],
-			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Dernek ile ilgili açıklamanızı giriniz'],
+			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama(seo)', 'Dernek ile ilgili açıklamanızı giriniz'],
 			[0 => 'text', 1 => 'maps', 2 => 'Maps', 'Google Maps'],
+			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Dernek ile ilgili açıklamanızı giriniz'],
 			[0 => 'select', 1 => 'aktif', 2 => 'Aktif', 50 => $aktifmi],
 			[0 => 'hidden', 1 => 'islem', 20 => 'dost_dernek'],
 			[0 => 'hidden', 1 => 'id', 20 => g('id')],
 			[0 => 'hidden', 1 => 'yap', 20 => 'duzenle'],
+			[0 => 'submit', 20 => 'Gönder'],
 		);
 
 		echo sistem_formla($veriler, 'dost_dernek', $dost_dernek);
@@ -119,14 +120,15 @@ class dost_dernek{
 		}
 
 		$veriler=array(
-			[0 => 'submit', 20 => 'Gönder'],
 			[0 => 'input', 1 => 'baslik', 2 => 'Dernek Adı', 3 => 'Dernek Adı'],
 			[0 => 'select', 1 => 'dost_dernek_kat_id', 2 => 'Dernek Kategori İL-İLÇE', 50 => $dost_dernek_kat_id],
-			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Dernek ile ilgili açıklamanızı giriniz'],
+			[0 => 'text', 1 => 'kisa_aciklama', 2 => 'Kısa Açıklama(seo)', 'Dernek ile ilgili açıklamanızı giriniz'],
 			[0 => 'text', 1 => 'maps', 2 => 'Maps', 'Google Maps'],
+			[0 => 'text2', 1 => 'aciklama', 2 => 'Açıklama', 'Dernek ile ilgili açıklamanızı giriniz'],
 			[0 => 'select', 1 => 'aktif', 2 => 'Aktif', 50 => $aktifmi],
 			[0 => 'hidden', 1 => 'islem', 20 => 'dost_dernek'],
 			[0 => 'hidden', 1 => 'yap', 20 => 'ekle'],
+			[0 => 'submit', 20 => 'Gönder'],
 		);
 
 		echo sistem_formla($veriler);

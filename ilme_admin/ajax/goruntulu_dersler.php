@@ -52,6 +52,7 @@ switch ($yap) {
 
 	case 'ekle':
 		$baslik=p('baslik');
+		$resim=p('resim');
 		$aciklama=$_POST['aciklama'];
 		//$aciklama=p('aciklama', false);
 		$kisa_aciklama=p('kisa_aciklama');
@@ -71,6 +72,7 @@ switch ($yap) {
 			$ekle=$db->insert('goruntulu_dersler')->set(array(
 				'baslik' => $baslik,
 				'slug' => $slug,
+				'resim' => $resim,
 				'uye_id' => session('id'),
 				'aciklama' => $aciklama,
 				'kat_id' => $kat_id,
@@ -112,6 +114,7 @@ switch ($yap) {
 	case 'duzenle':
 		$id=p('id');
 		$baslik=p('baslik');
+		$resim=p('resim');
 		$aciklama=$_POST['aciklama'];
 		//$aciklama=p('aciklama', false);
 		$kisa_aciklama=p('kisa_aciklama');
@@ -135,6 +138,7 @@ switch ($yap) {
 			$upla=$db->update('goruntulu_dersler')->where('id', $id)->set(array(
 				'baslik' => $baslik,
 				'slug' => $slug,
+				'resim' => $resim,
 				'aciklama' => $aciklama,
 				'duz_id' => session('id'),
 				'kat_id' => $kat_id,

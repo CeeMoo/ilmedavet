@@ -1,7 +1,7 @@
 <?php array_push($g_js, 'templates/'.site_template.'/assets/js/iletisim.js'); ?>
 <div class="container">
       <div class="row p-5">
-        <div class="col-md-6 order-md-1 mb-4 text-break">
+        <div class="col-md-6 order-md-1 text-break">
           <h2><?php 
           if(!empty($ilet['baslik']))
             echo $ilet['baslik'];
@@ -67,12 +67,4 @@
 
       </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2017-2018 Company Name</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
     </div>

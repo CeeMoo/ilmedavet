@@ -14,7 +14,9 @@ $yap = p('yap');
 switch ($yap) {
 	case 'ekle':
 		$baslik=p('baslik');
-		$aciklama=p('aciklama');
+		$aciklama=$_POST['aciklama'];
+		//$aciklama=p('aciklama');
+		$kisa_aciklama=p('kisa_aciklama');
 		$dost_dernek_kat_id=p('dost_dernek_kat_id');
 		$maps=p('maps');
 		$aktif=p('aktif');
@@ -40,6 +42,7 @@ switch ($yap) {
 				'baslik' => $baslik,
 				'slug' => $slug,
 				'aciklama' => $aciklama,
+				'kisa_aciklama' => $kisa_aciklama,
 				'dost_dernek_kat_id' => $dost_dernek_kat_id,
 				'maps' => $maps,
 				'aktif' => $aktif,
@@ -60,6 +63,7 @@ switch ($yap) {
 		$baslik=p('baslik');
 		$aciklama=$_POST['aciklama'];
 		//$aciklama=p('aciklama', false);
+		$kisa_aciklama=p('kisa_aciklama');
 		$dost_dernek_kat_id=p('dost_dernek_kat_id');
 		$maps=p('maps');
 		$aktif=p('aktif');
@@ -82,6 +86,7 @@ switch ($yap) {
 				'baslik' => $baslik,
 				'slug' => $slug,
 				'aciklama' => $aciklama,
+				'kisa_aciklama' => $kisa_aciklama,
 				'dost_dernek_kat_id' => $dost_dernek_kat_id,
 				'maps' => $maps,
 				'aktif' => $aktif,
@@ -103,8 +108,10 @@ switch ($yap) {
 		$aktif=p('aktif');
 
 		if(!empty($baslik) && is_numeric($aktif)){
+			$slug=sef_link($baslik);
 			$ekle=$db->insert('dost_dernek_kat')->set(array(
 				'baslik' => $baslik,
+				'slug' => $slug,
 				'aktif' => $aktif
 			));
 
@@ -126,8 +133,10 @@ switch ($yap) {
 		$aktif=p('aktif');
 
 		if(!empty($baslik) && is_numeric($aktif)){
+			$slug=sef_link($baslik);
 			$upla=$db->update('dost_dernek_kat')->where('id', $id)->set(array(
 				'baslik' => $baslik,
+				'slug' => $slug,
 				'aktif' => $aktif
 			));
 

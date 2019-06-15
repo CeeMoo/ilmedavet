@@ -100,7 +100,10 @@
 								}
 							
 							$cikti.='<div class="col-3"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][baslik]" value="'.$ext['baslik'].'"></div>
-								<div class="col"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" value="'.$ext['aciklama'].'"></div>
+								<div class="col">';
+							//$cikti.='<input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" value="'.$ext['aciklama'].'">';
+							$cikti.='<textarea name="'.$ve[1].'['.$ext['id'].'][aciklama]" class="form-control" cols="30" rows="3">'.$ext['aciklama'].'</textarea>';
+								$cikti.='</div>
 								<div class="float-right"><button class="btn btn-info" onclick="goruntulu_extra_sil('.$ext['id'].');"><i class="fas fa-backspace"></i></button></div>
 							</div>';
 						}
@@ -158,7 +161,12 @@
 								}
 							
 							$cikti.='<div class="col-3"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][baslik]" value="'.$ext['baslik'].'"></div>
-								<div class="col"><input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" value="'.$ext['aciklama'].'"></div>
+								<div class="col">';
+
+							//$cikti.='<input type="text" class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" value="'.$ext['aciklama'].'">';
+							$cikti.='<textarea class="form-control" name="'.$ve[1].'['.$ext['id'].'][aciklama]" id="" cols="30" rows="5">'.$ext['aciklama'].'</textarea>';
+
+							$cikti.='</div>
 								<div class="float-right"><button class="btn btn-info" onclick="goruntulu_extra_sil('.$ext['id'].');"><i class="fas fa-backspace"></i></button></div>
 							</div>';
 						}

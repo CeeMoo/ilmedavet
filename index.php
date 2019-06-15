@@ -13,6 +13,13 @@
 		'templates/static/footer.php'
 	);
 	
+	$title='';
+	$desc='';
+	$keyword='';
+	$g_logo='';
+	$url=url;
+	$g_author='huutheme';
+	
 	foreach($array_tema_part as $theme_cik){
 		if(file_exists($theme_cik)){
 			require $theme_cik;

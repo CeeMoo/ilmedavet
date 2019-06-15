@@ -14,8 +14,8 @@
 	$g_logo='';
 	$url=url;
 	$g_author='huutheme';
-	
-	require 'templates/'.site_template.'/controller/dost_dernek.php';
+
+	require 'templates/'.site_template.'/controller/yazili_dersler.php';
 
 		
 ?>
