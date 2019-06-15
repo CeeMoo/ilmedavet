@@ -61,7 +61,7 @@ INSERT INTO `ayarlar` (`id`, `type`, `baslik`, `veri`, `deger`, `gosterim`) VALU
 (18, 'textarea', 'İletişim Açıklama', 'iletisim_aciklama', '<ul>\r\n	<li>Merkez Mahallesi, Halaskargazi Cad. Ayka&ccedil; Plaza, No:199, K:6, D:7, 24381 Şişli/İstanbul</li>\r\n	<li>270 - 188 - 6026</li>\r\n	<li><a href=\"mailto:domain@expooler.com\">domain@expooler.com</a></li>\r\n</ul>\r\n', 3),
 (19, 'input', 'Site Gösterim', 'site_status', '1', 1),
 (20, 'input', 'Site Template', 'site_template', 'ilmedavet', 1),
-(21, 'input', 'Admin Yol', 'admin_yol', 'adminci', 1),
+(21, 'input', 'Admin Yol', 'admin_yol', 'ilme_admin', 1),
 (22, 'input', 'Yazar Yolu', 'yazar_yol', 'ilme_yazar', 1);
 
 -- --------------------------------------------------------
