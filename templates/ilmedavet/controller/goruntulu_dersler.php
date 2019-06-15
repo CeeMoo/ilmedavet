@@ -66,7 +66,7 @@
 			// pagination example
 			$totalRecord = $db->from('goruntulu_dersler')->select('count(id) as total')->total();
 
-			$pageLimit = 2;
+			$pageLimit = 4;
 			if($totalRecord > 0){
 				$pageParam = 's';
 				$pagination = $db->pagination($totalRecord, $pageLimit, $pageParam);
