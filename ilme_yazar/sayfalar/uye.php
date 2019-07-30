@@ -6,7 +6,7 @@ foreach($cikti_array as $cikti){
 }
 
 
-array_push($g_js, '../templates/ckeditor/ckeditor.js','js/editor.js');
+array_push($g_js, '../dokumantasyon/editor/ckeditor.js','js/editor.js');
 
 
 echo '

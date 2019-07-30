@@ -1,18 +1,18 @@
 <?php
 
 $g_css=array(
-	'../node_modules/bootstrap/dist/css/bootstrap.css',
-	'../node_modules/bootstrap/dist/css/bootstrap-grid.css',
-	'../node_modules/bootstrap/dist/css/bootstrap-reboot.css',
+	'../dokumantasyon/bootstrap/css/bootstrap.min.css',
+	'../dokumantasyon/bootstrap/css/bootstrap-grid.css',
+	'../dokumantasyon/bootstrap/css/bootstrap-reboot.css',
 );
 
 $g_js_head=array(
-	'../node_modules/jquery/dist/jquery.js',
+	'../dokumantasyon/jquery/jquery.min.js',
 );
 
 $g_js=array(
-	'../node_modules/bootstrap/dist/js/bootstrap.js',
-	'../node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+	'../dokumantasyon/bootstrap/js/bootstrap.js',
+	'../dokumantasyon/bootstrap/js/bootstrap.bundle.js',
 	'js/admin.js',
 );
 
@@ -21,5 +21,6 @@ $desc='';
 $keyword='';
 $g_logo='';
 $url=url;
+$g_author='huutheme';
 
-$seo=array('title' => $title, 'desc' => $desc, 'keyword' => $keyword, 'url' => $url);
+$seo=array('title' => $title, 'desc' => $desc, 'keyword' => $keyword, 'url' => $url, 'g_author' => $g_author);

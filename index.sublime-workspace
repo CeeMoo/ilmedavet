@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"a",
+				"auto\theight"
+			],
+			[
+				"logo",
+				"logoarka.png\tw:177 h:200"
+			],
+			[
 				"bas",
 				"baslik\t(yazili_dersler.php)"
 			],
@@ -231,6 +243,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "templates/ilmedavet/view/anasayfa.php",
+			"settings":
+			{
+				"buffer_size": 7482,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -243,6 +264,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"livereload",
 				"LiveReload: Enable/disable plug-ins"
@@ -258,10 +283,6 @@
 			[
 				"liverelo",
 				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"liverelaod",
@@ -326,17 +347,33 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/ilmedavet",
-		"/C/xampp/htdocs/ilmedavet/ilme_admin",
-		"/C/xampp/htdocs/ilmedavet/ilme_admin/sayfalar",
-		"/C/xampp/htdocs/ilmedavet/templates",
-		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet",
-		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet/controller",
-		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet/view",
-		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet/view/goruntulu_dersler"
+		"//CEEMOO/htdocs/ilmedavet",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/static",
+		"//CEEMOO/htdocs/ilmedavet/ilme_yazar",
+		"//CEEMOO/htdocs/ilmedavet/ilme_yazar/sayfalar",
+		"//CEEMOO/htdocs/ilmedavet/templates",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/assets",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/assets/css",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/controller",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/view"
 	],
 	"file_history":
 	[
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/assets/css/ilmedavet.css",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/sayfalar.php",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/static/control.php",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/control.php",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/yazili_dersler.php",
+		"//CEEMOO/htdocs/ilmedavet/ilme_yazar/sayfalar/uye.php",
+		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/site_ust.php",
+		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/dost_dernek.php",
+		"//CEEMOO/htdocs/ilmedavet/ilme_yazar/sayfalar/makaleler.php",
+		"//CEEMOO/htdocs/ilmedavet/dokumantasyon/jquery.js",
+		"//CEEMOO/htdocs/ilmedavet/dokumantasyon/jquery.min.js",
+		"//CEEMOO/htdocs/ilmedavet/index.html",
 		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet/control.php",
 		"/C/xampp/htdocs/ilmedavet/ilme_admin/sayfalar/dost_dernek.php",
 		"/C/xampp/htdocs/ilmedavet/templates/ilmedavet/controller/goruntulu_dersler.php",
@@ -359,7 +396,6 @@
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/view/anasayfa.php",
 		"//CEEMOO/htdocs/ilmedavet/yazarlar.php",
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/controller/yazili_dersler.php",
-		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/control.php",
 		"//CEEMOO/htdocs/ilmedavet/goruntulu_dersler.php",
 		"//CEEMOO/htdocs/ilmedavet/dost_dernek.php",
 		"//CEEMOO/htdocs/ilmedavet/index.php",
@@ -381,11 +417,8 @@
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/assets/js/sesli_dersler.js",
 		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/sesli_dersler.php",
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/assets/js/sesli_dersler.php",
-		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/site_ust.php",
-		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/sayfalar.php",
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/view/dost_dernek/dost_dernek.php",
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/view/dost_dernek/dost_dernek_view.php",
-		"//CEEMOO/htdocs/ilmedavet/ilme_admin/sayfalar/dost_dernek.php",
 		"//CEEMOO/htdocs/ilmedavet/ilme_admin/ajax/dost_dernek.php",
 		"//CEEMOO/htdocs/ilmedavet/templates/ilmedavet/view/dost_dernek_view.php",
 		"/C/xampp/htdocs/ilmedavet/system/baglan.php",
@@ -456,19 +489,11 @@
 		"/C/xampp/htdocs/00calis/localdriver/adminim/sistem/functionlar.php",
 		"/C/xampp/htdocs/00calis/localdriver/adminim/sistem/ayarlar.php",
 		"/C/xampp/htdocs/00calis/localdriver/adminim/sayfam/iletisim.php",
-		"/C/xampp/htdocs/ilmedavet/system/system.php",
-		"/C/xampp/htdocs/00calis/localdriver/adminim/sayfam/anasayfa.php",
-		"/C/xampp/htdocs/00calis/localdriver/adminim/index.php",
-		"/C/Users/Cee/AppData/Roaming/Sublime Text 3/Monokai.sublime-color-scheme",
-		"/C/xampp/htdocs/deneme/hoba.php",
-		"/C/xampp/htdocs/deneme/falan.php",
-		"/C/xampp/htdocs/00freamework/symfony/my-project/src/Controller/deneme.php",
-		"/C/xampp/htdocs/00freamework/symfony/my-project/config/routes.yaml",
-		"/C/Users/Cee/Desktop/html/elementler.html"
+		"/C/xampp/htdocs/ilmedavet/system/system.php"
 	],
 	"find":
 	{
-		"height": 118.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -483,6 +508,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"h-50",
+			"h-",
+			"height",
+			"node_modules",
 			"sesli_extra",
 			"ses_ext",
 			"sesli_dersler",
@@ -564,6 +593,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"dokumantasyon",
 			"goruntulu_extra",
 			"goruntulu_dersler",
 			"yazarlar",
@@ -599,6 +629,45 @@
 	"groups":
 	[
 		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/ilmedavet/view/anasayfa.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"SL.114.region_keys":
+							[
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
 			"sheets":
 			[
 			]
@@ -621,11 +690,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.475567190227,
 			1.0
 		],
 		"rows":
@@ -647,7 +723,7 @@
 	"project": "index.sublime-project",
 	"replace":
 	{
-		"height": 232.0
+		"height": 114.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -656,6 +732,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ilmeadmin/sayfalar/",
+				"ilme_admin\\sayfalar\\dost_dernek.php"
+			],
 			[
 				"site_ust",
 				"templates\\ilmedavet\\site_ust.php"

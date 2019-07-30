@@ -6,10 +6,10 @@ foreach($cikti_array as $cikti){
 }
 
 $cek_css=array(
-	'../templates/DataTables/datatables.css',
+	'../dokumantasyon/DataTables/datatables.css',
 );
 
-array_push($g_js, '../templates/DataTables/datatables.min.js', '../templates/ckeditor/ckeditor.js', 'js/datatables.js');
+array_push($g_js, '../dokumantasyon/DataTables/datatables.min.js', '../dokumantasyon/editor/ckeditor.js', 'js/datatables.js');
 echo system_dosya_cagir($cek_css, 'css');
 
 echo '

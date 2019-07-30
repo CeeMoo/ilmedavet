@@ -9,7 +9,8 @@ aside#menu_kisim{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#d7d7d7',GradientType=0 ); /* IE6-9 */
 	box-shadow: inset 0px 0px 2px 0px #FAFAFA;
 }
-#logom{position: absolute;top: 0;z-index: 9999}
+#logom{position: absolute;top: 0;z-index: 9999;background-image: url('../images/logoarka.png');width: 150px;height: 170px;}
+#logom img {width: 100%;height: auto;padding: 8px;}
 
 .no-gutters {
   margin-right: 0;

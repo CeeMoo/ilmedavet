@@ -16,9 +16,10 @@
 	</div>
 	<aside id="menu_kisim">
 		<div class="container">
-			<div id="logom">
-				<img src="<?=url_yol?>images/logo.png" alt="<?=title?>">
-			</div>
+			<a href="<?=url?>"><div id="logom">
+					<img src="<?=url_yol?>images/logo-ilim.png" alt="<?=title?>">
+				</div>
+			</a>
 			<!--
 			-->
 			<nav class="navbar navbar-expand-lg navbar-light">
